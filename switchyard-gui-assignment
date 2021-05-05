@@ -83,7 +83,7 @@ class modbusThread(threading.Thread):
 
             time.sleep(1.5)
             
-
+# Function for toggling switches. Writes to PLC coils and changes button colour based on state of the switch. (Green = On, Grey = Off)
 def toggleButton(coil):
     coil_stats = coilstatus[coil]
     
