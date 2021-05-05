@@ -88,10 +88,10 @@ def toggleButton(coil):
     coil_stats = coilstatus[coil]
     
     if coil_stats[0] == True:    
-# Wrap the MODBUS IO in a try/except to catch potential comms or PLC failure
+
         try:
             client.write_coil(coil_stats[1], False, unit=1)
-# Pop-up window when connection is lost to PLC
+
         except:
             tkinter.tkinter.messagebox.showerror("PLC_COMMS_FAILURE", "CHECK THE PLC!")        
             return
